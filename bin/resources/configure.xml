@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	
+	<bean id="address1" class="beans.Address">
+					<constructor-arg value="West Jurain"  index="0"></constructor-arg>
+					<constructor-arg value="Shyampur"  index="1"></constructor-arg>
+					<constructor-arg value="Dhaka"  index="2"></constructor-arg>
+	</bean>
+	
+	<bean id="address2" class="beans.Address">
+					<constructor-arg value="Kadamtoli"  index="0"></constructor-arg>
+					<constructor-arg value="Uttara"  index="1"></constructor-arg>
+					<constructor-arg value="Dhaka"  index="2"></constructor-arg>
+	</bean>
+	
+	<bean id="employee1" class="beans.Employee">
+					<constructor-arg value="Moshiur Rahman Shuvo"  index="0"></constructor-arg>
+					<constructor-arg value="25" type="int"  index="2"></constructor-arg>
+					<constructor-arg value="shuvorm87@gmail.com"  index="1"></constructor-arg>
+					<constructor-arg>
+									<ref bean="address1" />
+					</constructor-arg>
+	</bean>
+	
+	<bean id="employee2" class="beans.Employee">
+					<constructor-arg value="Maidul Islam Fahim"  index="0"></constructor-arg>
+					<constructor-arg value="20" type="int"  index="2"></constructor-arg>
+					<constructor-arg value="fahimMaidul@gmail.com"  index="1"></constructor-arg>
+					<constructor-arg>
+									<ref bean="address2" />
+					</constructor-arg>
+	</bean>
+
+</beans>
